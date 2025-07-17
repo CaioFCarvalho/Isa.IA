@@ -38,7 +38,10 @@ export default async function handler(req, res) {
     const openaiData = await openaiRes.json();
     const reply = openaiData.choices?.[0]?.message?.content || "Desculpe, tive um problema para entender. Pode repetir?";
 
-    const zapiResponse = await fetch("https://api.z-api.io/instances/YOUR_INSTANCE_ID/token/YOUR_INSTANCE_TOKEN/send-text", {
+    // Enviar resposta para o WhatsApp via Z-API
+    const zapiURL = "https://api.z-api.io/instances/3E43E8DD1D9DC08F239A669115FAC68F/token/77B09F787B096B72BF713C32/send-text";
+
+    const zapiResponse = await fetch(zapiURL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
