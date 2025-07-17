@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Agente ISA para atendimento via WhatsApp",
   "main": "api/webhook.js",
-  "type": "module",
   "scripts": {
     "start": "node api/webhook.js"
   },
@@ -11,3 +10,4 @@
     "node-fetch": "^2.6.7"
   }
 }
+remove "type": "module" para corrigir erro de require()
