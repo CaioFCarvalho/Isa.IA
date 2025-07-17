@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Agente ISA para atendimento via WhatsApp",
   "main": "api/webhook.js",
+  "type": "module",
   "scripts": {
     "start": "node api/webhook.js"
   },
